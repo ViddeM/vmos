@@ -3,7 +3,7 @@
 # Tell build process to exit if there are any errors.
 set -oue pipefail
 
-base_name="Sediment $OS_VERSION"
+base_name="VMOS $OS_VERSION"
 
 # Generate a name for the image to be used when selecting
 # boot entry.
@@ -53,17 +53,17 @@ pretty_name () {
 
     # If the variable is not empty, i.e. a PR triggered the
     # build.
-    if [[ -n "$GITHUB_PR_HEAD_SHA" ]]; then
+    #if [[ -n "$GITHUB_PR_HEAD_SHA" ]]; then
         # Take everything before the first '/' character
-        ref="pr-${GITHUB_REF_NAME%/*}"
+    #    ref="pr-${GITHUB_REF_NAME%/*}"
         # Take the first 7 characters
-        sha="${GITHUB_PR_HEAD_SHA:0:7}"
-    else
+    #    sha="${GITHUB_PR_HEAD_SHA:0:7}"
+    #else
         # Generate a date with format YYYYMMDD
         ref="$GITHUB_REF_NAME-$(date +%Y%m%d)"
         # Take the first 7 characters
         sha="${GITHUB_SHA:0:7}"
-    fi
+    #fi
 
     echo "$base_name - ($ref) [$sha]"
 }

@@ -66,7 +66,7 @@ pretty_name () {
     #fi
 
     #echo "$base_name - ($ref) [$sha]"
-    echo "$base_name - $(date '+%Y-%m-%d @ %H:%M')
+    echo "$base_name - $(date '+%Y-%m-%d @ %H:%M')"
 }
 
 # Change the PRETTY_NAME value in '/usr/lib/os-release' to the generated

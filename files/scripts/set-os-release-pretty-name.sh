@@ -60,12 +60,13 @@ pretty_name () {
     #    sha="${GITHUB_PR_HEAD_SHA:0:7}"
     #else
         # Generate a date with format YYYYMMDD
-        ref="$GITHUB_REF_NAME-$(date +%Y%m%d)"
+        #ref="$GITHUB_REF_NAME-$(date +%Y%m%d)"
         # Take the first 7 characters
-        sha="${GITHUB_SHA:0:7}"
+        #sha="${GITHUB_SHA:0:7}"
     #fi
 
-    echo "$base_name - ($ref) [$sha]"
+    #echo "$base_name - ($ref) [$sha]"
+    echo "$base_name - $(date '+%Y-%m-%d @ %H:%M')
 }
 
 # Change the PRETTY_NAME value in '/usr/lib/os-release' to the generated

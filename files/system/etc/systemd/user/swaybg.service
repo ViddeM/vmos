@@ -4,6 +4,6 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/swaybg -m fill -i "%h/Pictures/flight_dark.webp"
+ExecStart=/usr/bin/swaybg -m fill -i "/usr/share/backgrounds/fedora-workstation/flight_dark.webp"
 Restart=on-failure
 

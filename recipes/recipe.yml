@@ -56,6 +56,7 @@ modules:
   - type: script
     scripts:
      - set-os-release-pretty-name.sh
+     - symlink-niri-wants.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 

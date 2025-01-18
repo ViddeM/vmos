@@ -27,6 +27,8 @@ modules:
       - alacritty
       - neovim
       - docker
+      - fuzzel
+      - waybar
     # remove:
       # - firefox
       # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
@@ -45,6 +47,10 @@ modules:
     fonts:
       nerd-fonts:
         - Meslo
+
+  - type: script
+    scripts:
+     - set-os-release-pretty-name.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 

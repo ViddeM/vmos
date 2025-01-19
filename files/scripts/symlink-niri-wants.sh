@@ -5,5 +5,5 @@
 # builds actually ran successfully without any errors!
 set -oue pipefail
 
-ln -s /usr/lib/systemd/user/mako.service ~/.config/systemd/user/niri.service.wants/
-ln -s /usr/lib/systemd/user/waybar.service ~/.config/systemd/user/niri.service.wants/
+ln -s /usr/lib/systemd/user/mako.service /etc/systemd/user/niri.service.wants/
+ln -s /usr/lib/systemd/user/waybar.service /etc/systemd/user/niri.service.wants/
